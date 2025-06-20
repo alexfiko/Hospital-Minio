@@ -13,4 +13,4 @@ services:
       - key: MINIO_ROOT_USER
         value: admin
       - key: MINIO_ROOT_PASSWORD
-        value: admin1234
+        value: tu_clave_segura
