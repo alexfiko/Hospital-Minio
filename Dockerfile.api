@@ -1,3 +1,4 @@
 FROM quay.io/minio/minio
 
-CMD ["/bin/sh", "-c", "echo '🌐 Ejecutando API en puerto 80...' && minio server /data --address :80"]
+ENTRYPOINT ["minio"]
+CMD ["server", "/data", "--address", ":80"]
