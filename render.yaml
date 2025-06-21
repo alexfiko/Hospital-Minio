@@ -1,13 +1,24 @@
 services:
   - type: web
-    name: minio-hospital
+    name: minio-api
     runtime: docker
-    dockerfilePath: ./Dockerfile
+    dockerfilePath: ./Dockerfile.api
     autoDeploy: true
     disk:
       name: data
       mountPath: /data
       sizeGB: 1
+    envVars:
+      - key: MINIO_ROOT_USER
+        value: admin
+      - key: MINIO_ROOT_PASSWORD
+        value: tu_clave_segura
+
+  - type: web
+    name: minio-console
+    runtime: docker
+    dockerfilePath: ./Dockerfile.console
+    autoDeploy: true
     envVars:
       - key: MINIO_ROOT_USER
         value: admin
