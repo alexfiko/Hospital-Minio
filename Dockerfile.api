@@ -1,0 +1,14 @@
+Dockerfile.api
+FROM quay.io/minio/minio
+
+CMD ["server", "/data", "--address", ":80"]
+
+
+Dockerfile.console
+FROM quay.io/minio/minio
+
+CMD ["server", "/data", "--console-address", ":80"]
+
+
+
+
