@@ -1,3 +1,4 @@
 FROM quay.io/minio/minio
 
-CMD ["server", "/data", "--console-address", ":80"]
+# Esto imprimirá en los logs el comando que estás usando
+CMD ["/bin/sh", "-c", "echo '🔍 Ejecutando consola en puerto 80...' && minio server /data --console-address :80"]
