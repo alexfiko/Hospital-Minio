@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: minio-api
+    name: hospital-minio-api
     runtime: docker
     dockerfilePath: ./Dockerfile.api
     autoDeploy: true
@@ -15,7 +15,7 @@ services:
         value: tu_clave_segura
 
   - type: web
-    name: minio-console
+    name: hospital-minio-console
     runtime: docker
     dockerfilePath: ./Dockerfile.console
     autoDeploy: true
