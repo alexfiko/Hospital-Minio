@@ -1,3 +1,3 @@
 FROM quay.io/minio/minio
 
-CMD ["server", "/data", "--address", ":80"]
+CMD ["server", "/data", "--console-address", ":80"]
